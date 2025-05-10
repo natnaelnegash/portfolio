@@ -1,4 +1,4 @@
-import figma_icon from "@/assets/icons/figma.png";
+import figma_icon from "@/assets/icons/Figma.png";
 import flutter_icon from "@/assets/icons/flutter_2.png";
 import group_icon from "@/assets/icons/Group.png";
 import mongo_icon from "@/assets/icons/mongoE.png";

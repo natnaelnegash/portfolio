@@ -1,5 +1,5 @@
 import React from "react";
-import icons from "../../constants/icons";
+import icons from "@/constants/icons";
 
 const Project_Right = ({ link, title, detail }) => {
   return (

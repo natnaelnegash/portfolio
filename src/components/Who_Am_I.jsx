@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../../../../Downloads/Telegram Desktop/profile.jpg";
+import profile from "@/assets/images/profile.jpg";
 
 const Who_Am_I = () => {
   return (

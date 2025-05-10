@@ -1,6 +1,5 @@
 import React from "react";
-import Nav from "../../components/Nav";
-import About_Me from "../../components/About_Me";
+import About_Me from "@/components/About_Me";
 
 const Home = () => {
   return (

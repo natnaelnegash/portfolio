@@ -1,6 +1,6 @@
 import React from "react";
-import icons from "../../../constants/icons";
-import Contacts from "../../components/Contacts";
+import icons from "@/constants/icons";
+import Contacts from "@/components/Contacts";
 
 const Contact_Me = () => {
   return (

@@ -1,12 +1,9 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Home from "./screens/Home/Home";
-import Skills from "./screens/Home/Skills";
-import Projects from "./screens/Home/Projects";
-import Contact_Me from "./screens/Home/Contact_Me";
-import Nav from "./components/Nav";
+import Home from "@/screens/Home/Home";
+import Skills from "@/screens/Home/Skills";
+import Projects from "@/screens/Home/Projects";
+import Contact_Me from "@/screens/Home/Contact_Me";
+import Nav from "@/components/Nav";
 
 function App() {
   return (

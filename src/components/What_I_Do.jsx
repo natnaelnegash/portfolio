@@ -1,7 +1,7 @@
 import React from "react";
-import web_icon from "../assets/icons/Group.png";
-import figma_icon from "../assets/icons/figma.png";
-import flutter_icon from "../assets/icons/flutter.png";
+import web_icon from "@/assets/icons/Group.png";
+import figma_icon from "@/assets/icons/figma.png";
+import flutter_icon from "@/assets/icons/flutter.png";
 
 const What_I_Do = () => {
   return (
@@ -41,8 +41,8 @@ const What_I_Do = () => {
               <div>
                 <p className="text-[16px]">Mobile App Developer</p>
                 <p className="text-[14px] w-[150px] h-[80px] ml-3">
-                  Creative web developer specializing in react on front-end and
-                  nodejs on back-end
+                  I use both reactnative and flutter for developing cool
+                  applicaitons
                 </p>
               </div>
             </div>

@@ -32,7 +32,7 @@ const Nav = () => {
             transition: "all 0.3s",
             animation: "ease-out",
           }}
-          className={height < 60 ? "text-1xl" : "text-2xl"}
+          className={height < 20 ? "text-1xl" : "text-2xl"}
         >
           Home
         </a>
@@ -43,7 +43,7 @@ const Nav = () => {
             transition: "all 0.3s",
             animation: "ease-out",
           }}
-          className={height < 60 ? "text-1xl" : "text-2xl"}
+          className={height < 20 ? "text-1xl" : "text-2xl"}
         >
           Skills
         </a>
@@ -54,7 +54,7 @@ const Nav = () => {
             transition: "all 0.3s",
             animation: "ease-out",
           }}
-          className={height < 60 ? "text-1xl" : "text-2xl"}
+          className={height < 20 ? "text-1xl" : "text-2xl"}
         >
           Projects
         </a>
@@ -65,7 +65,7 @@ const Nav = () => {
             transition: "all 0.3s",
             animation: "ease-out",
           }}
-          className={height < 60 ? "text-1xl" : "text-2xl"}
+          className={height < 20 ? "text-1xl" : "text-2xl"}
         >
           Contact Me
         </a>

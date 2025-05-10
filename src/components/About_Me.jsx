@@ -1,6 +1,6 @@
 import React from "react";
-import Who_Am_I from "./Who_Am_I";
-import What_I_Do from "./What_I_Do";
+import Who_Am_I from "@/components/Who_Am_I";
+import What_I_Do from "@/components/What_I_Do";
 
 const About_Me = () => {
   return (

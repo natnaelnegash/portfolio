@@ -1,6 +1,6 @@
 import figma_icon from "@/assets/icons/figma.png";
 import flutter_icon from "@/assets/icons/flutter_2.png";
-import group_icon from "@/assets/icons/group.png";
+import group_icon from "@/assets/icons/Group.png";
 import mongo_icon from "@/assets/icons/mongoE.png";
 import node_icon from "@/assets/icons/nodeE.png";
 import postgres_icon from "@/assets/icons/postgresqlE.png";

@@ -1,6 +1,6 @@
 import React from "react";
 import Project_Right from "@/components/Project_Right";
-import Project_Left from "@/components/Project_left";
+import Project_Left from "@/components/Project_Left";
 
 const Projects = () => {
   return (

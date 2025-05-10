@@ -1,6 +1,6 @@
 import React from "react";
 import web_icon from "@/assets/icons/Group.png";
-import figma_icon from "@/assets/icons/figma.png";
+import figma_icon from "@/assets/icons/Figma.png";
 import flutter_icon from "@/assets/icons/flutter.png";
 
 const What_I_Do = () => {

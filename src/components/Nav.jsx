@@ -1,76 +1,53 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Nav = () => {
-  const [height, setHeight] = useState();
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const minHeight = 10;
-      const maxHeight = 60;
-      const newHeight = Math.max(minHeight, maxHeight - scrollY);
-      setHeight(newHeight);
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const links = [
+    { name: "Home", href: "#home" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact Me", href: "#contact_me" },
+  ];
+
   return (
-    <div
-      style={{
-        height: `${height}px`,
-        borderRadius: height < 60 && height,
-        opacity: "-moz-initial",
-      }}
-      className="flex ease-out duration-200 transition-all fixed top-0 w-[1245px] z-100 justify-center place-items-center rounded-3xl h-[60px] p-2 bg-[#ABAFB5]"
+    <motion.div
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-4"
     >
-      <div className="flex justify-between w-1/2">
-        <a
-          href="#home"
-          style={{
-            color: "#122E34",
-            transition: "all 0.3s",
-            animation: "ease-out",
-          }}
-          className={height < 20 ? "text-1xl" : "text-2xl"}
-        >
-          Home
-        </a>
-        <a
-          href="#skills"
-          style={{
-            color: "#122E34",
-            transition: "all 0.3s",
-            animation: "ease-out",
-          }}
-          className={height < 20 ? "text-1xl" : "text-2xl"}
-        >
-          Skills
-        </a>
-        <a
-          href="#projects"
-          style={{
-            color: "#122E34",
-            transition: "all 0.3s",
-            animation: "ease-out",
-          }}
-          className={height < 20 ? "text-1xl" : "text-2xl"}
-        >
-          Projects
-        </a>
-        <a
-          href="#contact_me"
-          style={{
-            color: "#122E34",
-            transition: "all 0.3s",
-            animation: "ease-out",
-          }}
-          className={height < 20 ? "text-1xl" : "text-2xl"}
-        >
-          Contact Me
-        </a>
-      </div>
-    </div>
+      <motion.nav
+        layout
+        className={`flex items-center px-6 py-3 rounded-full transition-all duration-300 ${
+          scrolled
+            ? "glass shadow-lg shadow-black/20"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="flex gap-6 sm:gap-10">
+          {links.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm sm:text-base font-medium text-white/80 hover:text-[#00d2ff] hover:drop-shadow-[0_0_8px_rgba(0,210,255,0.8)] transition-all duration-300"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+      </motion.nav>
+    </motion.div>
   );
 };
 

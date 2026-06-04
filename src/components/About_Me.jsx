@@ -4,9 +4,13 @@ import What_I_Do from "@/components/What_I_Do";
 
 const About_Me = () => {
   return (
-    <div className="flex justify-between w-full h-[570px] items-center">
-      <Who_Am_I />
-      <What_I_Do />
+    <div className="flex flex-col w-full items-center gap-32">
+      <div className="w-full flex justify-center">
+        <Who_Am_I />
+      </div>
+      <div className="w-full flex justify-center w-full">
+        <What_I_Do />
+      </div>
     </div>
   );
 };

@@ -1,11 +1,18 @@
 import React from "react";
 import About_Me from "@/components/About_Me";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <section id="home" className="w-full h-[100vh] flex flex-col gap-10">
-      <div className="flex justify-between w-1/2 h-[60px]"></div>
-      <About_Me />
+    <section id="home" className="w-full min-h-screen flex flex-col justify-center items-center pt-24 pb-12">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="w-full h-full flex flex-col justify-center"
+      >
+        <About_Me />
+      </motion.div>
     </section>
   );
 };

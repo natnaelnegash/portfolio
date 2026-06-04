@@ -18,6 +18,11 @@ import arrow from "@/assets/icons/arrow.png";
 import redux from "@/assets/icons/redux.png";
 import laravel from "@/assets/icons/laravel.png";
 import firebase from "@/assets/icons/firebase.png";
+import nextjs from "@/assets/icons/nextjs.png";
+import zustand from "@/assets/icons/zustand.png";
+import swagger from "@/assets/icons/swagger.png";
+import hoppscotch from "@/assets/icons/hoppscotch.png";
+import drizzle from "@/assets/icons/drizzle.png";
 
 const icons = {
   figma_icon,
@@ -40,6 +45,11 @@ const icons = {
   redux,
   laravel,
   firebase,
+  nextjs,
+  zustand,
+  swagger, 
+  hoppscotch,
+  drizzle
 };
 
 export default icons;

@@ -20,7 +20,7 @@ const Contact_Me = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 
   // IMPORTANT: Replace "YOUR_FORMSPREE_ENDPOINT" with your actual endpoint from formspree.io
-  const formEndpoint = import.meta.env.VITE_FORMSPREE_FORM || "https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT";
+  const formEndpoint = "https://formspree.io/f/mgobejgb" ;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

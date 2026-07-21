@@ -38,16 +38,23 @@ const Experience = () => {
     {
       title: "Software Engineering Intern",
       company: "EagleLion Plc",
-      period: "Recent",
-      description: "Collaborated with a dynamic team to develop web and mobile applications. Contributed to real-world projects, gaining hands-on experience in full-stack development, modern frameworks, and best practices.",
+      period: "Jul 2025 – Sep 2025",
+      description: "Returned for a second summer to take on greater ownership. Led front-end architecture decisions for internal tools, mentored junior interns, and contributed to production deployments across web and mobile projects.",
       alignRight: false
     },
     {
-      title: "Computer Science and Engineering",
-      company: "Adama Science and Technology University",
-      period: "Present",
-      description: "Currently pursuing a degree with a focus on software engineering principles, algorithms, and full-stack web development. Active in building personal projects and honing creative problem-solving skills.",
+      title: "Software Engineering Intern",
+      company: "EagleLion Plc",
+      period: "Jul 2024 – Sep 2024",
+      description: "Collaborated with a cross-functional team to develop web and mobile applications. Built RESTful API endpoints, implemented responsive UI components, and gained hands-on experience with modern full-stack frameworks and CI/CD workflows.",
       alignRight: true
+    },
+    {
+      title: "B.Sc. Computer Science & Engineering",
+      company: "Adama Science and Technology University",
+      period: "May 2022 – May 2026",
+      description: "Graduated with a focus on software engineering, algorithms, and systems design. Built 7+ production projects during studies, actively participated in hackathons, and developed strong problem-solving and collaborative skills.",
+      alignRight: false
     }
   ];
 

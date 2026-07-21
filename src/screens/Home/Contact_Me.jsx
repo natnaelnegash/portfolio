@@ -83,7 +83,7 @@ const Contact_Me = () => {
                 className="flex flex-col items-center justify-center text-center p-8 glass rounded-3xl h-full"
               >
                 <div className="w-20 h-20 bg-[#00d2ff]/20 rounded-full flex items-center justify-center mb-6">
-                  <span className="text-[#00d2ff] text-4xl">✓</span>
+                  <span className="text-[#00d2ff] text-4xl" aria-hidden="true">✓</span>
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-4">Message Sent!</h3>
                 <p className="text-white/70 mb-8">
@@ -105,6 +105,7 @@ const Contact_Me = () => {
                     name="name" 
                     id="name" 
                     required
+                    autoComplete="name"
                     placeholder="John Doe"
                     className="w-full px-6 py-4 rounded-2xl glass bg-white/5 border border-white/10 focus:border-[#00d2ff]/50 focus:outline-none focus:ring-1 focus:ring-[#00d2ff]/50 text-white placeholder-white/30 transition-all"
                   />
@@ -116,6 +117,7 @@ const Contact_Me = () => {
                     name="email" 
                     id="email" 
                     required
+                    autoComplete="email"
                     placeholder="john@example.com"
                     className="w-full px-6 py-4 rounded-2xl glass bg-white/5 border border-white/10 focus:border-[#00d2ff]/50 focus:outline-none focus:ring-1 focus:ring-[#00d2ff]/50 text-white placeholder-white/30 transition-all"
                   />
@@ -141,7 +143,7 @@ const Contact_Me = () => {
                 </button>
                 
                 {formStatus && (
-                  <p className="text-sm text-red-400 text-center mt-2">{formStatus}</p>
+                  <p className="text-sm text-red-400 text-center mt-2" role="alert" aria-live="polite">{formStatus}</p>
                 )}
               </form>
             )}
@@ -168,8 +170,19 @@ const Contact_Me = () => {
         </div>
       </motion.div>
       
-      <footer className="mt-20 text-white/40 text-sm z-10">
-        © {new Date().getFullYear()} Natnael Negash. All rights reserved.
+      <footer className="mt-24 w-full max-w-6xl z-10">
+        <div className="w-full h-px bg-white/10 mb-8"></div>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8">
+          <p className="text-white/40 text-sm">
+            © {new Date().getFullYear()} Natnael Negash. Built with React & Tailwind CSS.
+          </p>
+          <nav aria-label="Footer navigation" className="flex gap-6">
+            <a href="#home" className="text-white/40 hover:text-white/70 text-sm transition-colors">Home</a>
+            <a href="#projects" className="text-white/40 hover:text-white/70 text-sm transition-colors">Projects</a>
+            <a href="https://github.com/natnaelnegash" target="_blank" rel="noreferrer" className="text-white/40 hover:text-white/70 text-sm transition-colors">GitHub</a>
+            <a href="https://linkedin.com/in/natnael-negash-305996289" target="_blank" rel="noreferrer" className="text-white/40 hover:text-white/70 text-sm transition-colors">LinkedIn</a>
+          </nav>
+        </div>
       </footer>
     </section>
   );

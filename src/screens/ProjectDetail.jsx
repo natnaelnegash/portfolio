@@ -58,15 +58,26 @@ const ProjectDetail = () => {
         </motion.div>
 
         {/* Hero Image / Placeholder */}
-        <motion.div 
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="w-full aspect-video rounded-[2rem] glass-card flex items-center justify-center mb-16 relative overflow-hidden"
-        >
-           <div className="absolute inset-0 bg-gradient-to-br from-[#677E8A]/20 to-[#233D44]/40 mix-blend-overlay"></div>
-           <span className="text-white/40 text-2xl font-medium tracking-widest uppercase">Project Preview</span>
-        </motion.div>
+        {project.preview_img ? (
+          <motion.div 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="w-full rounded-[2rem] glass-card flex items-center justify-center mb-16 relative overflow-hidden"
+          >
+            <img src={project.preview_img} alt={`${project.title} preview`} className="w-full h-auto" loading="lazy" />
+          </motion.div>
+        ) : (
+          <motion.div 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="w-full aspect-video rounded-[2rem] glass-card flex items-center justify-center mb-16 relative overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-[#677E8A]/20 to-[#233D44]/40 mix-blend-overlay"></div>
+            <span className="text-white/40 text-2xl font-medium tracking-widest uppercase">Project Preview</span>
+          </motion.div>
+        )}
 
         {/* Details Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

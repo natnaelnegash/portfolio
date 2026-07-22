@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { projectsData } from "@/constants/data";
 import { motion } from "framer-motion";
 import icons from "@/constants/icons";
+import ImageSlider from "@/components/ImageSlider";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -23,6 +24,10 @@ const ProjectDetail = () => {
       </div>
     );
   }
+
+  const previewImages = project.preview_img;
+  const isArray = Array.isArray(previewImages);
+  const hasPreview = previewImages && (isArray ? previewImages.length > 0 : true);
 
   return (
     <motion.section 
@@ -57,27 +62,28 @@ const ProjectDetail = () => {
           <p className="text-xl md:text-2xl text-[#00d2ff] font-medium">{project.role}</p>
         </motion.div>
 
-        {/* Hero Image / Placeholder */}
-        {project.preview_img ? (
-          <motion.div 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="w-full rounded-[2rem] glass-card flex items-center justify-center mb-16 relative overflow-hidden"
-          >
-            <img src={project.preview_img} alt={`${project.title} preview`} className="w-full h-auto" loading="lazy" />
-          </motion.div>
-        ) : (
-          <motion.div 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="w-full aspect-video rounded-[2rem] glass-card flex items-center justify-center mb-16 relative overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#677E8A]/20 to-[#233D44]/40 mix-blend-overlay"></div>
-            <span className="text-white/40 text-2xl font-medium tracking-widest uppercase">Project Preview</span>
-          </motion.div>
-        )}
+        {/* Preview Images */}
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="mb-16"
+        >
+          {hasPreview ? (
+            isArray ? (
+              <ImageSlider images={previewImages} title={project.title} />
+            ) : (
+              <div className="w-full rounded-[2rem] glass-card overflow-hidden">
+                <img src={previewImages} alt={`${project.title} preview`} className="w-full h-auto" loading="lazy" />
+              </div>
+            )
+          ) : (
+            <div className="w-full aspect-video rounded-[2rem] glass-card flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#677E8A]/20 to-[#233D44]/40 mix-blend-overlay"></div>
+              <span className="text-white/40 text-2xl font-medium tracking-widest uppercase">Project Preview</span>
+            </div>
+          )}
+        </motion.div>
 
         {/* Details Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

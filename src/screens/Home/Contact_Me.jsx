@@ -3,8 +3,6 @@ import icons from "@/constants/icons";
 import Contacts from "@/components/Contacts";
 import { motion } from "framer-motion";
 
-
-
 const Contact_Me = () => {
   const contactsData = [
     { icon: icons.mail, contact: "natnaelnegash95@gmail.com", link: "mailto:natnaelnegash95@gmail.com" },

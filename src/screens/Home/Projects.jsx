@@ -42,7 +42,12 @@ const ProjectCard = ({ id, title, detail, preview_img, techStack, role, index })
       
       <div className="w-full md:w-[220px] h-[160px] rounded-2xl bg-gradient-to-br from-[#677E8A]/50 to-[#233D44]/50 border border-white/5 flex items-center justify-center z-10 group-hover:scale-105 transition-transform duration-500 overflow-hidden flex-shrink-0">
         {preview_img ? (
-          <img src={preview_img} alt={`${title} preview`} className="w-full h-full object-cover" loading="lazy" />
+          <img 
+            src={Array.isArray(preview_img) ? preview_img[0] : preview_img} 
+            alt={`${title} preview`} 
+            className="w-full h-full object-cover" 
+            loading="lazy" 
+          />
         ) : (
           <span className="text-white/30 font-medium text-sm">Preview Coming</span>
         )}
@@ -65,6 +70,7 @@ const Projects = () => {
       
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 justify-items-center px-4">
         {projectsData.map((proj, idx) => (
+          <>
           <ProjectCard 
             key={proj.id}
             index={idx}
@@ -75,6 +81,7 @@ const Projects = () => {
             techStack={proj.techStack}
             role={proj.role}
           />
+          </>
         ))}
       </div>
     </section>

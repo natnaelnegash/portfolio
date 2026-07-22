@@ -1,10 +1,10 @@
-import clientsync from "../../public/Project Previews/clientsync-dashboard.png"
+import previews  from "./previews";
 export const projectsData = [
   {
     id: "astu-eats",
     title: "Astu Eats",
     link: "https://github.com/Mulusewu/astu-crowdsourced-food-delivery",
-    preview_img: null,
+    preview_img: previews.astueats,
     detail: "A scalable crowdsourced food delivery platform designed to empower peer-to-peer delivery system",
     fullDescription: "Astu Eats is a crowdsourced food delivery platform tailored for university campuses. It empowers students to order food or earn money by delivering it. The platform features real-time order tracking, a robust payment system, and an intuitive UI for both users and couriers.",
     techStack: ["React", "Node.js", "Express", "PostgreSQL", "Prisma"],
@@ -16,22 +16,22 @@ export const projectsData = [
     id: "astu-eats-admin-dashboard",
     title: "AE Admin Dashboard",
     link: "https://github.com/natnaelnegash/AE-Admin-Dash-Two",
-    preview_img: null,
+    preview_img: previews.ae_admin_dashboard,
     detail: "A centralized controlling unit for our crowdsourced food delivery platform",
-    fullDescription: "Astu Eats is a crowdsourced food delivery platform tailored for university campuses. It empowers students to order food or earn money by delivering it. The platform features real-time order tracking, a robust payment system, and an intuitive UI for both users and couriers.",
+    fullDescription: "This is a centralized control unit designed for managing the entire system of Astu Eats food delivery platform. It grants a high administrative power enabling tracking orders, managing restarants with corresponding staff and menu, handling disputes for customers, and also system configurations.",
     techStack: ["React", "Node.js", "Express", "PostgreSQL", "Prisma"],
     features: ["Full dispute resolving mechanisms", "Realtime analytics", "Controlled ledger revision", "System configuration"],
     role: "Full-stack Developer",
     year: "2026"
   },
   {
-  "id": "clientsync-os",
-  "title": "ClientSync OS",
-  "link": "https://github.com/natnaelnegash/client-sync",
-  preview_img: clientsync,
-  "detail": "A comprehensive agency operating system and automated client portal.",
-  "fullDescription": "ClientSync OS is an end-to-end project management and client portal platform designed for freelancers and creative agencies. It features a robust Workspace Provisioning Engine that deep-copies predefined workflow templates into live projects, alongside AI-enhanced scope generation, automated milestone tracking, and integrated invoicing.",
-  "techStack": [
+  id: "clientsync-os",
+  title: "ClientSync OS",
+  link: "https://github.com/natnaelnegash/client-sync",
+  preview_img: previews.clientsync,
+  detail: "A comprehensive agency operating system and automated client portal.",
+  fullDescription: "ClientSync OS is an end-to-end project management and client portal platform designed for freelancers and creative agencies. It features a robust Workspace Provisioning Engine that deep-copies predefined workflow templates into live projects, alongside AI-enhanced scope generation, automated milestone tracking, and integrated invoicing.",
+  techStack: [
     "Next.js",
     "PostgreSQL",
     "Drizzle ORM",
@@ -39,15 +39,15 @@ export const projectsData = [
     "Tailwind CSS",
     "Gemini AI"
   ],
-  "features": [
+  features: [
     "Dynamic template provisioning engine",
     "AI-powered scope of work enhancement",
     "Automated magic-link client portals",
     "Nested milestone and deliverable tracking",
     "Integrated financials and invoicing"
   ],
-  "role": "Full-stack Developer",
-  "year": "2026"
+  role: "Full-stack Developer",
+  year: "2026"
 },
 {
     id: "linkio",

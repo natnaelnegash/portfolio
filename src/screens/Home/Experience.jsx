@@ -25,7 +25,7 @@ const ExperienceItem = ({ title, company, period, description, alignRight }) => 
       
       <div className="hidden md:flex flex-col items-center justify-center w-10">
         <div className="w-4 h-4 rounded-full bg-[#00d2ff] shadow-[0_0_15px_rgba(0,210,255,0.8)] z-10"></div>
-        <div className="w-[2px] h-32 bg-gradient-to-b from-[#00d2ff] to-transparent absolute -z-10"></div>
+        <div className="w-[2px] h-96 bg-gradient-to-b from-transparent via-[#00d2ff] to-transparent absolute -z-10"></div>
       </div>
       
       <div className="w-full md:w-1/2 hidden md:block"></div>

@@ -7,7 +7,7 @@ export const projectsData = [
     preview_img: previews.astueats,
     detail: "A scalable crowdsourced food delivery platform designed to empower peer-to-peer delivery system",
     fullDescription: "Astu Eats is a crowdsourced food delivery platform tailored for university campuses. It empowers students to order food or earn money by delivering it. The platform features real-time order tracking, a robust payment system, and an intuitive UI for both users and couriers.",
-    techStack: ["React", "Node.js", "Express", "PostgreSQL", "Prisma"],
+    techStack: ["React", "Node.js", "Express", "PostgreSQL", "Prisma", "Chapa Gateway"],
     features: ["Peer-to-peer delivery", "Real-time tracking", "Secure payments", "Rating system"],
     role: "Backend Developer",
     year: "2026"
